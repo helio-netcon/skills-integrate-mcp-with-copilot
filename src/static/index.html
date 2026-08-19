@@ -8,8 +8,36 @@
   </head>
   <body>
     <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+      <div class="header-row">
+        <div class="header-spacer"></div>
+        <div>
+          <h1>Mergington High School</h1>
+          <h2>Extracurricular Activities</h2>
+        </div>
+        <div class="user-menu">
+          <button id="user-button" class="user-button" type="button" aria-label="Teacher login">👤</button>
+          <span id="user-status" class="user-status">Guest</span>
+        </div>
+      </div>
+      <div id="login-modal" class="modal hidden" aria-live="polite">
+        <div class="modal-content">
+          <h3>Teacher Login</h3>
+          <form id="login-form">
+            <div class="form-group">
+              <label for="teacher-username">Username</label>
+              <input id="teacher-username" name="username" type="text" required />
+            </div>
+            <div class="form-group">
+              <label for="teacher-password">Password</label>
+              <input id="teacher-password" name="password" type="password" required />
+            </div>
+            <div class="modal-actions">
+              <button type="submit">Log In</button>
+              <button id="logout-button" type="button" class="secondary-button">Log Out</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </header>
 
     <main>
